@@ -14,8 +14,8 @@
 
 </head>
 <body>
-<section>
-    <div class="row">
+<section id="testsection">
+    <div id="clone" class="row">
       <div>
         <i aria-hidden="true" class="fa fa-id-badge"></i>
         <i aria-hidden="true" class="fa fa-user-circle"></i>
@@ -2045,34 +2045,48 @@
       </div>
     </div>
 </section>
+<script>
+    for(i=0;i<33;i++) {
+        const item = document.getElementById("clone")
+        const clone = item.cloneNode(true);
+        document.getElementById("testsection").appendChild(clone);
+        console.log(i)
+    }
+</script>
 
-<div class="content" style="
+
+    <div class="content" style="
     z-index: 2;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
   ">
 
-    <h2 id="ueberschrift" class="glow"
-    style="
+    <h2 id="ueberschrift" class="glow" style="
     display: none;
     font-size: 80px;
-    text-align: -webkit-center;
-    -ms-text-align-last: center;
-    -moz-text-align-last: center;
-    background-color: #cc0000;"
+    text-align: center;
+    background-color: rgba(204,0,0,0);
+    transform: translateX(25%);"
+
     >
-      Überschrift <!-- todo Center the Headline -->
+     Überschrift
     </h2>
 
-
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <p id="text" class="texttoshow"
     style="
     display: none;
     font-size: 30px;
     color: #ffffff;
-    text-align: center;"
+    text-align: center;
+"
   >
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -2102,3 +2116,7 @@
 <footer>
 </footer>
 </html>
+
+<!--
+var everyfont = ["fa fa-id-badge","fa fa-user-circle", "fa fa-car", "fa fa-bath", "fa fa-battery-three-quarters", "fa fa-times", "fa fa-code", "fa fa-cogs", "fa fa-database", "fa fa-external-link-square",
+"fa fa-heartbeat", "fa fa-map-marker", "fa fa-television", "fa fa-tasks", "fa fa-sort-numeric-desc", "fa fa-wifi", "fa fa-video-camera", "fa fa-volume-up", "fa fa-exclamation-triangle", "fa fa-wheelchair"] -->
