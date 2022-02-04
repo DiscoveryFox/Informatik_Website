@@ -12,5 +12,7 @@
     <orderEntry type="library" name="@fortawesome/fontawesome-free" level="application" />
     <orderEntry type="library" name="font-awesome" level="application" />
     <orderEntry type="library" name="b59ef9d887" level="application" />
+    <orderEntry type="library" name="scrollreveal" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
 </module>

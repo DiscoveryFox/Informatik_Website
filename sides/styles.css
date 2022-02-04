@@ -7,6 +7,9 @@
   margin: 0;
   padding: 0;
 }
+* ::-webkit-scrollbar {
+  display: none;
+}
 
 section {
   position: relative;
@@ -16,6 +19,7 @@ section {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  z-index: 1;
 }
 
 section .row {
@@ -27,6 +31,7 @@ section .row {
   white-space: nowrap;
   font-size: 64px;
   transform: rotate(-30deg);
+  z-index: 1;
 }
 
 i {
@@ -93,6 +98,19 @@ section .row:nth-child(even) div:nth-child(2) {
   }
   100% {
     transform: translate(0%);
+  }
+}
+.glow {
+  color: #fff;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00ff64, 0 0 40px #00ff64, 0 0 50px #19ff8c, 0 0 60px #19ff8c, 0 0 70px #19ff8c;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00b259, 0 0 70px #00b259, 0 0 80px #00b259;
   }
 }
 
