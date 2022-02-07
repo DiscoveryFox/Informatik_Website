@@ -2046,7 +2046,7 @@
     </div>
 </section>
 <script>
-    for(i=0;i<33;i++) {
+    for(let i=0; i<10; i++) {
         const item = document.getElementById("clone")
         const clone = item.cloneNode(true);
         document.getElementById("testsection").appendChild(clone);
@@ -2062,43 +2062,52 @@
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-  ">
-
-    <h2 id="ueberschrift" class="glow" style="
     display: none;
-    font-size: 80px;
-    text-align: center;
-    background-color: rgba(204,0,0,0);
-    transform: translateX(25%);"
 
-    >
-     Überschrift
-    </h2>
+  "
+    id="content">
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <p id="text" class="texttoshow"
-    style="
-    display: none;
+      <!--
+      todo remove the id tag and replace it with something else if necessary
+      -->
+      <fieldset id="ueberuerberschrift" class = "ueberueberschrift" >
+        <legend><h2 id="ueberschrift" class="glow" style="
+          font-size: 80px;
+          text-align: center;
+          background-color: rgba(204,0,0,0);">
+          <!-- transform: translateX(25%); -->
+
+          Überschrift
+        </h2></legend>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <p id="text" class="texttoshow"
+           style="
     font-size: 30px;
     color: #ffffff;
     text-align: center;
 "
-  >
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        >
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          <br>
+        </p>
+        <br>
+        <br>
+        <br>
+
+      </fieldset>
+
 
   <script>
-        $(document).bind('mousewheel', function(e) {
-          if (document.getElementById("ueberschrift").style.display === 'none') {
-              document.getElementById("ueberschrift").style.visibility= 'hidden';
-              document.getElementById("text").style.visibility= 'hidden';
-              document.getElementById("ueberschrift").style.display = "flex";
-              document.getElementById("text").style.display = "flex";
-              ScrollReveal().reveal('.glow')
-              ScrollReveal().reveal('.texttoshow')
+        $(document).bind('mousewheel', function() {
+          if (document.getElementById("content").style.display === 'none') {
+              document.getElementById("content").style.visibility = 'hidden';
+              document.getElementById("content").style.display = "flex";
+              ScrollReveal().reveal('.content')
               console.log('Scrolled!');
           }
         }
@@ -2119,4 +2128,30 @@
 
 <!--
 var everyfont = ["fa fa-id-badge","fa fa-user-circle", "fa fa-car", "fa fa-bath", "fa fa-battery-three-quarters", "fa fa-times", "fa fa-code", "fa fa-cogs", "fa fa-database", "fa fa-external-link-square",
-"fa fa-heartbeat", "fa fa-map-marker", "fa fa-television", "fa fa-tasks", "fa fa-sort-numeric-desc", "fa fa-wifi", "fa fa-video-camera", "fa fa-volume-up", "fa fa-exclamation-triangle", "fa fa-wheelchair"] -->
+"fa fa-heartbeat", "fa fa-map-marker", "fa fa-television", "fa fa-tasks", "fa fa-sort-numeric-desc", "fa fa-wifi", "fa fa-video-camera", "fa fa-volume-up", "fa fa-exclamation-triangle", "fa fa-wheelchair"]
+
+
+ document.getElementById("content").style.visibility = 'hidden';
+              document.getElementById("ueberschrift").style.visibility= 'hidden';
+
+              document.getElementById("text").style.visibility= 'hidden';
+              document.getElementById("content").style.display = "flex";
+              document.getElementById("ueberuerberschrift").style.display = "flex";
+              document.getElementById("ueberschrift").style.display = "flex";
+              document.getElementById("text").style.display = "flex";
+              ScrollReveal().reveal('.glow')
+              ScrollReveal().reveal('.texttoshow')
+
+
+
+ document.getElementById("ueberuerberschrift").style.visibility = 'hidden';
+
+ document.getElementById("ueberuerberschrift").style.display = "flex";
+
+ style="display: none;"
+ ScrollReveal().reveal('.ueberueberschrift')
+
+
+
+
+ -->
